@@ -1,0 +1,63 @@
+.pending-con {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+}
+
+.pending-img-box {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.pending-con .pending-img-box .img-1 {
+  width: 100px;
+  height: 25px;
+}
+.pending-img-box .img-2 {
+  width: 50px;
+  height: 25px;
+}
+
+.pending-con .loader-box {
+  width: 90%;
+  height: 200px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-box p {
+  color: green;
+  font-weight: bolder;
+  margin-bottom: -20px;
+  font-style: italic;
+}
+.loader-box img {
+  width: 200px;
+  height: 120px;
+}
+
+.pending-con .approval {
+  border: 1px solid black;
+  border-left: 0;
+  border-right: 0;
+  width: 90%;
+  padding: 5px 0;
+}
+
+.back-to-home {
+  color: blue;
+}
+.sure {
+  font-size: 20px;
+}
+.transfer {
+  width: 250px;
+  height: 70px;
+  border: 2px solid blue;
+  border-radius: 5px;
+}

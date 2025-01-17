@@ -1,0 +1,148 @@
+.home-con {
+  width: 100%;
+  /* height: 100vh; */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.home-con .home-top-icon {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+}
+
+.home-con .top-box {
+  width: 95%;
+  height: 210px;
+  padding: 5px;
+  color: white;
+  background-color: rgba(103, 160, 235, 0.911);
+}
+
+.top-box .balance {
+  text-align: end;
+  padding: 10px;
+}
+.av-balance {
+  font-size: 12px;
+}
+.top-box .inner-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid;
+}
+.top-box .inner-box p {
+  border-left: 1px solid;
+  padding: 0 5px;
+  width: 100px;
+}
+.top-box .inner-box .p-dot {
+  font-size: 16px;
+  font-weight: bolder;
+  width: 80px;
+}
+
+.home-con .second-box {
+  width: 100%;
+  height: 180px;
+  padding: 5px;
+  color: white;
+  margin: 10px 0;
+  background-color: rgba(103, 160, 235, 0.911);
+}
+
+.home-con .available-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  height: 30px;
+}
+
+.show-details {
+  width: 100%;
+  font-size: 16px;
+  background-color: transparent;
+  border: 0;
+  border-top: 1px solid white;
+  margin-top: 25px;
+  padding: 5px;
+  color: white;
+}
+.home-con .third-box {
+  width: 100%;
+  height: 500px;
+  padding: 5px;
+  color: white;
+  margin: 10px 0;
+  background-color: rgba(103, 160, 235, 0.911);
+  overflow: scroll;
+}
+
+.transaction-box {
+  display: flex;
+  width: 98%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.733);
+  color: rgba(54, 51, 51, 0.966);
+  padding: 0 5px;
+  margin: 5px 0;
+}
+.transaction-box .box-1 * {
+  margin: 0;
+}
+.transaction-box .box-1 p {
+  font-size: 15px;
+}
+.transaction-box .box-2 p {
+  color: red;
+}
+.transaction-box .box-2 .span-c {
+  color: green;
+}
+
+.payment-box {
+  width: 90%;
+  height: 330px;
+  background-color: rgb(201, 215, 226);
+  position: absolute;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 2px solid blue;
+}
+
+.payment-box .btn-close {
+  width: 70px;
+  background-color: white;
+  color: red;
+  margin: 10px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.payment-box .btn-done {
+  width: 90%;
+  background-color: rgb(51, 83, 230);
+  color: white;
+  margin: 10px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.payment-box input {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 15px;
+  color: black;
+}
