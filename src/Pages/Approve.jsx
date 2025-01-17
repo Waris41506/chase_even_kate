@@ -8,7 +8,7 @@ import { HiDotsHorizontal } from "react-icons/hi";
 import MessageContent from "../Component/MessageContent";
 import { Link } from "react-router-dom";
 
-import completed from "../Assets/complatedLogo.png";
+import completed from "../assets/complatedLogo.png";
 
 const Approve = () => {
   return (

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Home.css";
-import { HiDotsHorizontal } from "react-icons/hi";
 import { CgProfile } from "react-icons/cg";
 import { IoArrowBack } from "react-icons/io5";
 import { FaInfoCircle } from "react-icons/fa";

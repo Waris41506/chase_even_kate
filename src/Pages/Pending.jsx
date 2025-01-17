@@ -1,9 +1,9 @@
 import React from "react";
 import "./Pending.css";
-import logo from "../Assets/Chase_logo_2007.svg.png";
-import masterCard from "../Assets/Mastercard-logo.svg.webp";
-import loader from "../Assets/loader.gif";
-import transfer from "../Assets/transfer.webp";
+import logo from "../assets/Chase_logo_2007.svg.png";
+import masterCard from "../assets/Mastercard-logo.svg.webp";
+import loader from "../assets/loader.gif";
+import transfer from "../assets/transfer.webp";
 import { Link } from "react-router-dom";
 
 const Pending = () => {

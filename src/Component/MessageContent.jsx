@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./MessageContent.css";
-import logo from "../Assets/Chase_logo_2007.svg.png";
+import logo from "../assets/Chase_logo_2007.svg.png";
 
 const MessageContent = () => {
   const [info, setInfo] = useState({
