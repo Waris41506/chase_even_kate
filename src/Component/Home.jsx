@@ -18,6 +18,9 @@ const Home = () => {
   const [charges, SetCharges] = useState(
     localStorage.getItem("charges") || "17.59"
   );
+  const [email, SetEmail] = useState(
+    localStorage.getItem("email") || "gunter55@gmail.com"
+  );
   const [paymentBox, setPaymentBox] = useState(false);
 
   const handleChangeName = (e) => {
@@ -32,12 +35,16 @@ const Home = () => {
   const handleChangeCharges = (e) => {
     SetCharges(e.target.value);
   };
+  const handleChangeEmail = (e) => {
+    SetEmail(e.target.value);
+  };
 
   const submit = () => {
     localStorage.setItem("name", name);
     localStorage.setItem("time", time);
     localStorage.setItem("amount", amount);
     localStorage.setItem("charges", charges);
+    localStorage.setItem("email", email);
 
     setPaymentBox(false);
   };
@@ -58,6 +65,11 @@ const Home = () => {
             onChange={handleChangeName}
             type="text"
             placeholder="Client Name"
+          />
+          <input
+            onChange={handleChangeEmail}
+            type="text"
+            placeholder="email.."
           />
           <input onChange={handleChangeTime} type="text" placeholder="Time" />
           <input
