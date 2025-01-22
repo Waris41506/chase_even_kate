@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { CgProfile } from "react-icons/cg";
 import { IoArrowBack } from "react-icons/io5";
 import { FaInfoCircle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import Login from "../Pages/Login";
 
 const Home = () => {
   const [name, SetName] = useState(
@@ -21,7 +22,12 @@ const Home = () => {
   const [email, SetEmail] = useState(
     localStorage.getItem("email") || "gunter55@gmail.com"
   );
+
   const [paymentBox, setPaymentBox] = useState(false);
+  const [login, setLogin] = useState(true);
+
+  const username = "Evan_kate";
+  let passCode;
 
   const handleChangeName = (e) => {
     SetName(e.target.value);
@@ -53,8 +59,52 @@ const Home = () => {
   const pending = () => {
     navigate("/pending");
   };
+
+  const geterateCode = (e) => {
+    e.preventDefault();
+    passCode = Math.floor(1000 + Math.random() * 9000);
+    localStorage.setItem("PassCode", passCode);
+    window.location.reload(true);
+  };
+
+  passCode = localStorage.getItem("PassCode");
+
+  useEffect(() => {
+    if (localStorage.getItem("isLogin") === "true") {
+      setLogin(false);
+    } else {
+      setLogin(true);
+    }
+  }, []);
+
+  const logIn = (e) => {
+    e.preventDefault();
+
+    if (localStorage.getItem("isOk") === "true") {
+      setLogin(false);
+
+      // setTimeout(() => {
+      //   localStorage.removeItem("PassCode");
+      // }, 10000);
+      return;
+    }
+  };
+
+  const logout = () => {
+    localStorage.setItem("isLogin", false);
+    window.location.reload(true);
+  };
+
   return (
     <div className="home-con">
+      {login && (
+        <Login
+          login={logIn}
+          passCode={passCode}
+          username={username}
+          geterateCode={geterateCode}
+        />
+      )}
       {paymentBox && (
         <div className="payment-box">
           <button className="btn-close" onClick={() => setPaymentBox(false)}>
@@ -90,7 +140,7 @@ const Home = () => {
 
       <div className="home-top-icon">
         <p>
-          <IoArrowBack size={25} />
+          <IoArrowBack size={25} onClick={logout} />
         </p>
 
         <h4>Welcome Back, Evan</h4>

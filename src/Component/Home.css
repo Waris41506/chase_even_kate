@@ -1,6 +1,5 @@
 .home-con {
   width: 100%;
-  /* height: 100vh; */
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -86,7 +85,7 @@
 
 .transaction-box {
   display: flex;
-  width: 98%;
+  width: 97%;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.733);
