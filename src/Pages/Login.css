@@ -25,6 +25,8 @@ form {
   background-color: white;
   border: 1px solid black;
   color: black;
+  max-width: 400px;
+  box-sizing: border-box;
 }
 
 form input,
