@@ -35,16 +35,11 @@ const Login = ({ login, passCode, username, geterateCode }) => {
 
   return (
     <div className="login-con">
-      {passCode ? (
+      <h2>Login</h2>
+      <form action="">
         <h3 className="code" onClick={handleShowCode}>
           {showCode ? `${passCode}` : "****"}
         </h3>
-      ) : (
-        ""
-      )}
-
-      <h2>Login</h2>
-      <form action="">
         <input
           type="text"
           placeholder="Username"
