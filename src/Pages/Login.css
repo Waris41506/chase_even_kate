@@ -55,6 +55,7 @@ form .btn-code,
 .login-con .code {
   text-align: center;
   color: white;
+  padding: 5px;
 }
 
 .login-con .show {

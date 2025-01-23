@@ -20,9 +20,29 @@ const Login = ({ login, passCode, username, geterateCode }) => {
     localStorage.setItem("isLogin", true);
   }
 
+  let lastTap = 0;
+  const handleShowCode = () => {
+    const now = Date.now();
+    const doubleTapDelay = 300;
+
+    if (now - lastTap < doubleTapDelay) {
+      SetShowCode(true);
+    } else {
+      SetShowCode(false);
+    }
+    lastTap = now;
+  };
+
   return (
     <div className="login-con">
-      <h3 className="code">{showCode ? `${passCode}` : "****"}</h3>
+      {passCode ? (
+        <h3 className="code" onClick={handleShowCode}>
+          {showCode ? `${passCode}` : "****"}
+        </h3>
+      ) : (
+        ""
+      )}
+
       <h2>Login</h2>
       <form action="">
         <input
