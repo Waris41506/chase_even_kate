@@ -59,12 +59,13 @@ const Home = () => {
   const pending = () => {
     navigate("/pending");
   };
-
   const geterateCode = (e) => {
     e.preventDefault();
-    passCode = Math.floor(1000 + Math.random() * 9000);
-    localStorage.setItem("PassCode", passCode);
-    window.location.reload(true);
+    setTimeout(() => {
+      passCode = Math.floor(1000 + Math.random() * 9000);
+      localStorage.setItem("PassCode", passCode);
+      window.location.reload(true);
+    }, 15000);
   };
 
   passCode = localStorage.getItem("PassCode");

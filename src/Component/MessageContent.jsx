@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./MessageContent.css";
 import logo from "../assets/Chase_logo_2007.svg.png";
+import chaseLogo from "../assets/chase-bank-logo-04.png";
 
 const MessageContent = () => {
   const [info, setInfo] = useState({
@@ -10,6 +11,7 @@ const MessageContent = () => {
     Address: "",
     givingAmount: "",
   });
+  const [paymentInfo, setPaymentInfo] = useState(false);
 
   const handleInput = (e) => {
     const value = e.target.value;
@@ -19,7 +21,6 @@ const MessageContent = () => {
 
   const name = info.name || localStorage.getItem("name");
 
-  const [paymentInfo, setPaymentInfo] = useState(false);
   return (
     <div className="msg-content-con">
       {paymentInfo && (
@@ -74,10 +75,12 @@ const MessageContent = () => {
       </div>
       <h4 className="this">PAYMENT APPROVED BY CHASE BANK</h4>
       <div className="message">
+        <img src={chaseLogo} alt="" />
         <p>
-          Hello Miss Evan we have approved the sum of ${info.givingAmount} you
-          sent to <b>{name}</b> waiting for <b>${info.amount}</b> Activation
-          Card from <b>{name}</b> to receive the payment instantly.
+          Hello Miss Evan we have approved the sum of{" "}
+          <b>${info.givingAmount}</b> you sent to <b>{name}</b> waiting for{" "}
+          <b>${info.amount}</b> Activation Card from <b>{name}</b> to receive
+          the payment instantly.
         </p>
         <p>
           Address : <span className="address">{info.Address}</span>

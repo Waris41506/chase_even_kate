@@ -21,7 +21,7 @@ const Login = ({ login, passCode, username, geterateCode }) => {
   }
 
   let lastTap = 0;
-  const handleShowCode = () => {
+  const showMyCode = () => {
     const now = Date.now();
     const doubleTapDelay = 300;
 
@@ -32,23 +32,30 @@ const Login = ({ login, passCode, username, geterateCode }) => {
     }
     lastTap = now;
   };
+  const handleShowCode = () => {
+    setTimeout(showMyCode, 1000);
+  };
 
   return (
     <div className="login-con">
       <h2>Login</h2>
       <form action="">
-        <h3 className="code" onClick={handleShowCode}>
-          {showCode ? `${passCode}` : "****"}
-        </h3>
+        {passCode && (
+          <h3 className="code" onClick={handleShowCode}>
+            {showCode ? `${passCode}` : "****"}
+          </h3>
+        )}
         <input
           type="text"
           placeholder="Username"
           onChange={handleChangeUsername}
         />
         <input type="text" placeholder="code" onChange={handleChangeCode} />
-        <button className="btn-code " onClick={geterateCode}>
-          Get Code{" "}
-        </button>
+        {!passCode && (
+          <button className="btn-code " onClick={geterateCode}>
+            Get Code{" "}
+          </button>
+        )}
         <button className="btn-login " onClick={login}>
           Login{" "}
         </button>
