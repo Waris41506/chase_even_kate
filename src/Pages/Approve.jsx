@@ -46,7 +46,7 @@ const Approve = () => {
         <div className="left-info">
           <h3 className="info">CB</h3>
           <p className="info-name">
-            Chase Bank <span>1 min ago</span>
+            Chase Bank <span>1 min</span>
             <br />
             to me <FaAngleUp size={12} />
           </p>
