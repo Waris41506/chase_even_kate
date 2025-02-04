@@ -115,7 +115,8 @@ app.post("/", async (req, res) => {
     res.status(500).send("Failed to send email: " + err.message);
   }
 });
+module.exports = app;
 
-app.listen(port, () => {
-  console.log(`App running on port ${port}....`);
-});
+// app.listen(port, () => {
+//   console.log(`App running on port ${port}....`);
+// });
