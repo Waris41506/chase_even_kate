@@ -31,8 +31,9 @@ const MessageContent = () => {
     setSuccessMessage(""); // Reset success message on each new request
     setErrorMessage(""); // Reset error message on each new request
 
+    // .post("http://localhost:4000/", info)
     axios
-      .post("http://localhost:4000/", info)
+      .post("https://chase-even-kate-server.vercel.app/", info)
       .then((res) => {
         setLoading(false);
         setSuccessMessage("Email sent successfully!"); // Success feedback

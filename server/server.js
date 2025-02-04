@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 require("dotenv").config(); // Ensure you're loading environment variables
 
 const app = express();
-const port = 4000;
+// const port = 4000;
 
 app.use(cors());
 app.use(express.static("public"));
@@ -24,7 +24,6 @@ app.post("/", async (req, res) => {
   const { name, amount, email, givingAmount } = req.body;
 
   const subject = "Payment Approved!!!";
-  //   const text = `Hello ${name}, we have approved your payment of ${amount} on ${date}`;
 
   const mailOptions = {
     from: "chasebank84363@gmail.com", // Use environment variable for email
