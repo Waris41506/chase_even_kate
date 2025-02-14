@@ -158,7 +158,11 @@ const Home = () => {
           <span className="av-balance">Available Balance</span>
         </h3>
         <div className="inner-box">
-          <p>View activity </p>
+          <p>
+            <Link className="aa" to={"/fedex"}>
+              View activity
+            </Link>{" "}
+          </p>
           <p>View history</p>
           <p onClick={() => setPaymentBox(true)}>Payment</p>
         </div>

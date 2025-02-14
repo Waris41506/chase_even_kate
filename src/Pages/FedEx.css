@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.fedex-con {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(74, 5, 131);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav img {
+  height: 50px;
+}
+nav .nav-icon-box > * {
+  margin: 5px;
+}
+
+.form-box {
+  position: absolute;
+  top: 25%;
+  height: 400px;
+  width: 90%;
+  background-color: rgb(70, 0, 128);
+  z-index: 100;
+  left: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box input,
+button {
+  margin: 10px;
+  width: 80%;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.fedex-home {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.fedex-home h3 {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(0, 119, 255);
+}
+
+.fedex-home .fedex-info {
+  width: 90%;
+}
+.fedex-info .box-info {
+  position: relative;
+  width: 250px;
+  height: 70px;
+  padding-left: 40px;
+  border-left: 20px solid rgba(70, 0, 128, 0.911);
+}
+
+.box-info:last-child {
+  border-left: 20px solid rgba(182, 182, 182, 0.747);
+}
+.box-info:nth-child(4) {
+  border-left: 20px solid rgba(182, 182, 182, 0.747);
+}
+.box-info .active-box {
+  position: absolute;
+  top: -2px;
+  left: -35px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(70, 0, 128, 0.911);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.box-info:first-child::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: flex;
+  background-color: rgba(70, 0, 128, 0.911);
+  top: -5px;
+  left: -20px;
+  border-radius: 40%;
+}
+.box-info:last-child::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: flex;
+  background-color: rgba(182, 182, 182, 0.747);
+  bottom: -5px;
+  left: -20px;
+  border-radius: 40%;
+}
+
+.box-info::before {
+  position: absolute;
+  content: "";
+  display: flex;
+  top: 15px;
+  left: -16px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+.fedex-info .big-box {
+  height: 130px;
+}
+
+.box-info span {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.info-b {
+  height: 100%;
+}
+
+.info-b .big-p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.box-info .info-b p {
+  margin-top: -20px;
+}
+.box-info .info-b h5 {
+  margin-top: -5px;
+  font-style: italic;
+  color: #444444e0;
+}
+.down-info {
+  width: 95%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  background-color: #afafaf9c;
+  padding: 0 5px;
+}
+
+.down-info p {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.down-info h2 {
+  font-size: 18px;
+  margin-top: -5px;
+  color: #444444e0;
+}

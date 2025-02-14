@@ -6,6 +6,9 @@
   align-items: center;
   position: relative;
 }
+.home-con .aa {
+  color: white;
+}
 .home-con .home-top-icon {
   width: 90%;
   display: flex;

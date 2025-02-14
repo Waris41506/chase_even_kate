@@ -6,6 +6,7 @@ import Approve from "./Pages/Approve";
 import Home from "./Component/Home";
 import { Route, Routes } from "react-router-dom";
 import Pending from "./Pages/Pending";
+import FedEx from "./Pages/FedEx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/approve" element={<Approve />} />
         <Route path="/pending" element={<Pending />} />
+        <Route path="/fedex" element={<FedEx />} />
       </Routes>
     </>
   );

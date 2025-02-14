@@ -24,6 +24,11 @@ const MessageContent = () => {
     setInfo({ ...info, [name]: value });
   };
 
+  const handleSubmit = () => {
+    setPaymentInfo(false);
+    localStorage.setItem("address", info.Address);
+  };
+
   const name = info.name || localStorage.getItem("name");
 
   const sendEmail = () => {
@@ -95,7 +100,7 @@ const MessageContent = () => {
             onChange={handleInput}
             placeholder="Date"
           />
-          <button className="btn-done" onClick={() => setPaymentInfo(false)}>
+          <button className="btn-done" onClick={handleSubmit}>
             Done
           </button>
         </div>
