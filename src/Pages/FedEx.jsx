@@ -22,8 +22,8 @@ const FedEx = () => {
           <img src={fedExLogo} alt="" />
         </Link>
         <div className="nav-icon-box">
-          <FaRegUserCircle color="fff" size={35} />
-          <IoMenuSharp color="fff" size={40} />
+          <FaRegUserCircle color="fff" size={30} />
+          <IoMenuSharp color="fff" size={35} />
         </div>
       </nav>
 
@@ -60,7 +60,7 @@ const FedEx = () => {
           <div className="box-info">
             {active === 1 && (
               <div className="active-box">
-                <FaRegArrowAltCircleRight color="#fff" size={40} />
+                <FaRegArrowAltCircleRight color="#fff" size={35} />
               </div>
             )}
             <span onClick={() => setActive(1)}>IN TRANSIT</span>
