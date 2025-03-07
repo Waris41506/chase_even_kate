@@ -25,6 +25,9 @@ const Home = () => {
 
   const [paymentBox, setPaymentBox] = useState(false);
   const [login, setLogin] = useState(true);
+  const [openBox, setOpenBox] = useState(false);
+  const [btcName, setBtcName] = useState(false);
+  const [btcamount, setBtcAmount] = useState("500");
 
   const username = "Evan_kate";
   let passCode;
@@ -96,8 +99,29 @@ const Home = () => {
     window.location.reload(true);
   };
 
+  const handleOpenBox = () => {
+    setOpenBox(false);
+    localStorage.setItem("btcAmount", btcamount);
+    localStorage.setItem("btcName", btcName);
+  };
+
   return (
     <div className="home-con">
+      {openBox && (
+        <div className="btc-box">
+          <input
+            type="text"
+            placeholder="Amount"
+            onChange={(e) => setBtcAmount(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Name"
+            onChange={(e) => setBtcName(e.target.value)}
+          />
+          <button onClick={handleOpenBox}>Done</button>
+        </div>
+      )}
       {login && (
         <Login
           login={logIn}
@@ -163,7 +187,11 @@ const Home = () => {
               View activity
             </Link>{" "}
           </p>
-          <p>View history</p>
+          <p>
+            <Link className="aa" to={"/bitcoin"}>
+              View history
+            </Link>{" "}
+          </p>
           <p onClick={() => setPaymentBox(true)}>Payment</p>
         </div>
       </div>
@@ -181,7 +209,9 @@ const Home = () => {
           </p>
           <p>$1,215,000,000.00</p>
         </div>
-        <button className="show-details">Show details</button>
+        <button className="show-details" onClick={() => setOpenBox(true)}>
+          Show details
+        </button>
       </div>
       <div className="third-box">
         <h4>Recent transactions</h4>

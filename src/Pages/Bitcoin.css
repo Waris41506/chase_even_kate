@@ -1,0 +1,115 @@
+.bitcoin-con {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(6, 2, 20);
+  color: white;
+  padding-top: 40px;
+  position: relative;
+}
+
+.bit-wit-box {
+  width: 95%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+.bit-wit-box p {
+  font-weight: bolder;
+}
+.sec-bit-box {
+  width: 100%;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid #615f5f;
+  margin-top: 10px;
+}
+.sec-bit-box h3 {
+  margin-top: -5px;
+}
+.sec-bit-box h3 span {
+  font-size: 12px;
+}
+.sec-bit-box h5 {
+  color: #696868;
+}
+.sec-bit-box .sp {
+  font-size: 16px;
+  margin-top: -15px;
+  color: yellow;
+}
+.sec-bit-box .spp {
+  font-size: 12px;
+  color: yellow;
+}
+
+.sec-bit-box p {
+  font-size: 12px;
+  width: 300px;
+  text-align: center;
+}
+.down-bit-box {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 30px;
+}
+.down-bit-box .bit-info-box {
+  width: 95%;
+  height: 50px;
+  margin: 2px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.aaa {
+  color: white;
+}
+
+.down-bit-box .pp {
+  color: yellow;
+  margin-top: 20px;
+}
+
+.btc-box {
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  top: 20%;
+  left: 30px;
+  background-color: #696868;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btc-box input,
+button {
+  width: 200px;
+  padding: 5px;
+  background-color: white;
+  color: black;
+  margin: 5px;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(53, 60, 131, 0.952);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper img {
+  width: 400px;
+  height: 400px;
+}
