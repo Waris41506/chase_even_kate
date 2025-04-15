@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Pending from "./Pages/Pending";
 import FedEx from "./Pages/FedEx";
 import Bitcoin from "./Pages/Bitcoin";
+import FedExPayment from "./Pages/FedExPayment";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/pending" element={<Pending />} />
         <Route path="/fedex" element={<FedEx />} />
         <Route path="/bitcoin" element={<Bitcoin />} />
+        <Route path="/fedexpayment" element={<FedExPayment />} />
       </Routes>
     </>
   );

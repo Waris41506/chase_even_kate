@@ -22,8 +22,10 @@ const FedEx = () => {
           <img src={fedExLogo} alt="" />
         </Link>
         <div className="nav-icon-box">
-          <FaRegUserCircle color="fff" size={30} />
-          <IoMenuSharp color="fff" size={35} />
+          <Link to={"/fedexpayment"}>
+            <FaRegUserCircle color="fff" size={28} />
+          </Link>
+          <IoMenuSharp color="fff" size={37} />
         </div>
       </nav>
 
