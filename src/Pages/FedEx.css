@@ -256,11 +256,11 @@ button {
   margin: 0;
 }
 .fedex-p-top-info p {
-  font-size: 10px;
+  font-size: 12px;
   margin: 0;
   line-height: 15px;
   font-weight: 500;
-  color: #5a5a5ae0;
+  color: #505050e0;
 }
 .fedex-pp {
   text-decoration: underline;
