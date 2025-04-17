@@ -37,8 +37,7 @@ nav .nav-icon-box > * {
 
 .form-box {
   position: absolute;
-  top: 25%;
-  height: 400px;
+  top: 15%;
   width: 90%;
   background-color: rgb(70, 0, 128);
   z-index: 100;

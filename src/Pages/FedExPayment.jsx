@@ -12,6 +12,9 @@ const FedExPayment = () => {
   const [descrition, setDescrition] = useState("");
   const [send, setSend] = useState("");
   const [delivery, setDelivery] = useState("");
+  const [fee, setFee] = useState("");
+  const [amount, setAmount] = useState("");
+  const [totalAmount, setTotalAmount] = useState("");
   const address = localStorage.getItem("address") || "Rock Hills, NC US";
 
   return (
@@ -52,6 +55,21 @@ const FedExPayment = () => {
             placeholder="delivery date"
             onChange={(e) => setDelivery(e.target.value)}
           />
+          <input
+            type="text"
+            placeholder="Fee"
+            onChange={(e) => setFee(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Amount"
+            onChange={(e) => setAmount(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Totle Amount"
+            onChange={(e) => setTotalAmount(e.target.value)}
+          />
           <button onClick={() => setShowForm(false)}>Done</button>
         </div>
       )}
@@ -91,16 +109,16 @@ const FedExPayment = () => {
       </div>
       <div className="fedex-p-blue-bg" id="fedex-p-blue-bg">
         <p id="pppp">{descrition}</p>
-        <p>$100.00</p>
-        <p>$100.00</p>
-        <p>$300.00</p>
+        <p>${fee}.00</p>
+        <p>${fee}.00</p>
+        <p>${amount}.00</p>
       </div>
 
       <div className="subtotal">
         <h2>PAYMENT METHOD</h2>
         <div className="subtotal--">
           <h2>SUBTOTAL</h2>
-          <h2>$500.00</h2>
+          <h2>${totalAmount}.00</h2>
         </div>
       </div>
       <div className="subtotal">
