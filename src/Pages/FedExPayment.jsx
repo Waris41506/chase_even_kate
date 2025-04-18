@@ -125,7 +125,7 @@ const FedExPayment = () => {
         <h2>{pMethod}</h2>
         <div className="subtotal--" id="subtotal--">
           <h2>TOTAL</h2>
-          <h2>$500.00</h2>
+          <h2>${totalAmount}.00</h2>
         </div>
       </div>
     </div>
