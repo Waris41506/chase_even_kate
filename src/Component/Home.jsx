@@ -117,14 +117,18 @@ const Home = () => {
       setLock(false);
     }
     lastTap = now;
+
+    localStorage.setItem("isLock", "isLock");
   };
   const handleLock = () => {
     setTimeout(showAcc, 1000);
   };
 
+  const isLock = localStorage.getItem("isLock");
+
   return (
     <div className="home-con ">
-      {!lock && (
+      {!lock && isLock !== "isLock" && (
         <div className="lock">
           Locked
           <span className="unlock" onClick={handleLock}></span>
