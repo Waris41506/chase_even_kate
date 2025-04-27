@@ -24,6 +24,7 @@ const Home = () => {
   );
 
   const [paymentBox, setPaymentBox] = useState(false);
+  const [lock, setLock] = useState(false);
   const [login, setLogin] = useState(true);
   const [openBox, setOpenBox] = useState(false);
   const [btcName, setBtcName] = useState(false);
@@ -105,8 +106,30 @@ const Home = () => {
     localStorage.setItem("btcName", btcName);
   };
 
+  let lastTap = 0;
+  const showAcc = () => {
+    const now = Date.now();
+    const doubleTapDelay = 300;
+
+    if (now - lastTap < doubleTapDelay) {
+      setLock(true);
+    } else {
+      setLock(false);
+    }
+    lastTap = now;
+  };
+  const handleLock = () => {
+    setTimeout(showAcc, 1000);
+  };
+
   return (
-    <div className="home-con">
+    <div className="home-con ">
+      {!lock && (
+        <div className="lock">
+          Locked
+          <span className="unlock" onClick={handleLock}></span>
+        </div>
+      )}
       {openBox && (
         <div className="btc-box">
           <input
