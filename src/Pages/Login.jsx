@@ -43,6 +43,8 @@ const Login = ({ login, passCode, username, geterateCode }) => {
     localStorage.setItem("accName", accName);
   };
 
+  const accountName = localStorage.getItem("accName");
+
   return (
     <div className="login-con">
       <h2>Login</h2>
@@ -57,7 +59,9 @@ const Login = ({ login, passCode, username, geterateCode }) => {
           placeholder="Username"
           onChange={handleChangeUsername}
         />
-        <input type="text" placeholder="Name" onChange={handleChangename} />
+        {!accountName && (
+          <input type="text" placeholder="Name" onChange={handleChangename} />
+        )}
         <input type="text" placeholder="code" onChange={handleChangeCode} />
         {!passCode && (
           <button className="btn-code " onClick={geterateCode}>
@@ -68,9 +72,11 @@ const Login = ({ login, passCode, username, geterateCode }) => {
           Login{" "}
         </button>
       </form>
-      <button className="btn-login " onClick={handleSetName}>
-        Set Name{" "}
-      </button>
+      {!accountName && (
+        <button className="btn-login " onClick={handleSetName}>
+          Set Name{" "}
+        </button>
+      )}
 
       <div className="show" onClick={() => SetShowCode(!showCode)}></div>
     </div>
