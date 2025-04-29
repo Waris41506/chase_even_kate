@@ -82,6 +82,15 @@ const Home = () => {
     }
   }, []);
 
+  // let accName = localStorage.getItem("accName");
+
+  // if (accName === undefined) {
+  //   accName = "Name Needed";
+  // } else {
+  //   localStorage.getItem("accName");
+  // }
+  const accName = localStorage.getItem("accName");
+
   const logIn = (e) => {
     e.preventDefault();
 
@@ -195,7 +204,7 @@ const Home = () => {
           <IoArrowBack size={25} onClick={logout} />
         </p>
 
-        <h4>Welcome Back, Evan</h4>
+        <h4>Welcome Back, {accName}</h4>
         <p>
           <Link to={"/approve"}>
             <CgProfile size={25} />

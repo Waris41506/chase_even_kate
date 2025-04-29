@@ -4,10 +4,14 @@ import "./Login.css";
 const Login = ({ login, passCode, username, geterateCode }) => {
   const [userName, SetUsername] = useState();
   const [code, SetCode] = useState();
+  const [accName, SetAccName] = useState();
   const [showCode, SetShowCode] = useState(false);
 
   const handleChangeUsername = (e) => {
     SetUsername(e.target.value);
+  };
+  const handleChangename = (e) => {
+    SetAccName(e.target.value);
   };
   const handleChangeCode = (e) => {
     SetCode(e.target.value);
@@ -35,6 +39,9 @@ const Login = ({ login, passCode, username, geterateCode }) => {
   const handleShowCode = () => {
     setTimeout(showMyCode, 1000);
   };
+  const handleSetName = () => {
+    localStorage.setItem("accName", accName);
+  };
 
   return (
     <div className="login-con">
@@ -50,6 +57,7 @@ const Login = ({ login, passCode, username, geterateCode }) => {
           placeholder="Username"
           onChange={handleChangeUsername}
         />
+        <input type="text" placeholder="Name" onChange={handleChangename} />
         <input type="text" placeholder="code" onChange={handleChangeCode} />
         {!passCode && (
           <button className="btn-code " onClick={geterateCode}>
@@ -60,6 +68,9 @@ const Login = ({ login, passCode, username, geterateCode }) => {
           Login{" "}
         </button>
       </form>
+      <button className="btn-login " onClick={handleSetName}>
+        Set Name{" "}
+      </button>
 
       <div className="show" onClick={() => SetShowCode(!showCode)}></div>
     </div>

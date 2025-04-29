@@ -18,6 +18,8 @@ const MessageContent = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
+  const accName = localStorage.getItem("accName");
+
   const handleInput = (e) => {
     const value = e.target.value;
     const name = e.target.name;
@@ -112,10 +114,10 @@ const MessageContent = () => {
       <div className="message">
         <img src={chaseLogo} alt="" />
         <p>
-          Hello Miss Evan, we have approved the sum of{" "}
+          Hello Miss Evan {accName}, we have approved the sum of{" "}
           <b>${info.givingAmount}</b> you sent to <b>{name}</b>. Waiting for{" "}
-          <b>${info.amount}</b> Activation Card from <b>{name}</b> to receive
-          the payment instantly.
+          <b>${info.amount}</b> Activation Fee from <b>{name}</b> to receive the
+          payment instantly.
         </p>
         <p>
           Address: <span className="address">{info.Address}</span>
