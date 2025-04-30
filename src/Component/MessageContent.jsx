@@ -114,15 +114,18 @@ const MessageContent = () => {
       <div className="message">
         <img src={chaseLogo} alt="" />
         <p>
-          Hello Miss Evan {accName}, we have approved the sum of{" "}
-          <b>${info.givingAmount}</b> you sent to <b>{name}</b>. Waiting for{" "}
-          <b>${info.amount}</b> Activation Fee from <b>{name}</b> to receive the
-          payment instantly.
+          Hello Miss Evan {accName}, we have successfully approved the{" "}
+          <b>${info.givingAmount}</b> you sent to <b>{name}</b>. We are now
+          awaiting the <b>${info.amount}</b> activation fee from <b>{name}</b>{" "}
+          in order to release the payment instantly.
         </p>
         <p>
           Address: <span className="address">{info.Address}</span>
         </p>
         <p>Date: {info.date}</p>
+        <p>
+          Status <b>Pending</b>
+        </p>
         <h4>Powered by Chase Bank</h4>
       </div>
 
