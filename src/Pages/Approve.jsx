@@ -27,7 +27,9 @@ const Approve = () => {
             <RiDeleteBin6Line size={25} />
           </p>
           <p>
-            <MdOutlineMail size={25} />
+            <Link to={"/afuye"}>
+              <MdOutlineMail size={25} />
+            </Link>
           </p>
           <p>
             <HiDotsHorizontal />

@@ -9,6 +9,7 @@ import Pending from "./Pages/Pending";
 import FedEx from "./Pages/FedEx";
 import Bitcoin from "./Pages/Bitcoin";
 import FedExPayment from "./Pages/FedExPayment";
+import Afuye from "./Pages/Afuye";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/fedex" element={<FedEx />} />
         <Route path="/bitcoin" element={<Bitcoin />} />
         <Route path="/fedexpayment" element={<FedExPayment />} />
+        <Route path="/afuye" element={<Afuye />} />
       </Routes>
     </>
   );
