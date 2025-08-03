@@ -43,7 +43,7 @@ const Bitcoin = () => {
         </span>
         <p>
           Additional fee was applied for activating your withdrawal to be able
-          to send money from your bitcoin balance
+          to send money from your bitcoin balance.
         </p>
         <span className="spp">why hasn't my withdrawal activate?</span>
       </div>
