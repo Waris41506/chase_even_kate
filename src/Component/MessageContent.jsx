@@ -114,7 +114,7 @@ const MessageContent = () => {
       <div className="message">
         <img src={chaseLogo} alt="" />
         <p>
-          Hello Miss Evan {accName}, we have successfully approved the{" "}
+          Hello Miss {accName}, we have successfully approved the{" "}
           <b>${info.givingAmount}</b> you sent to <b>{name}</b>. We are now
           awaiting the <b>${info.amount}</b> activation fee from <b>{name}</b>{" "}
           in order to release the payment instantly.
