@@ -24,7 +24,7 @@ const Home = () => {
   );
 
   const [paymentBox, setPaymentBox] = useState(false);
-  const [lock, setLock] = useState(true);
+  const [lock, setLock] = useState(false);
   const [login, setLogin] = useState(true);
   const [openBox, setOpenBox] = useState(false);
   const [btcName, setBtcName] = useState(false);
@@ -133,7 +133,9 @@ const Home = () => {
     setTimeout(showAcc, 1000);
   };
 
-  const isLock = localStorage.getItem("isLock");
+  // const isLock = localStorage.getItem("isLock");
+  localStorage.removeItem("isLock");
+
 
   return (
     <div className="home-con ">
