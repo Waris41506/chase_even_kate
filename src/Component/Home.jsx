@@ -142,8 +142,8 @@ const Home = () => {
       {!lock && isLock !== "isLock" && (
         
         <div className="lock">
-          Locked
-          <h3>Access Expired</h3>
+        
+          Access Declined
           <span className="unlock" onClick={handleLock}></span>
         </div>
 
