@@ -24,7 +24,7 @@ const Home = () => {
   );
 
   const [paymentBox, setPaymentBox] = useState(false);
-  const [lock, setLock] = useState(false);
+  const [lock, setLock] = useState(true);
   const [login, setLogin] = useState(true);
   const [openBox, setOpenBox] = useState(false);
   const [btcName, setBtcName] = useState(false);
@@ -138,10 +138,13 @@ const Home = () => {
   return (
     <div className="home-con ">
       {!lock && isLock !== "isLock" && (
+        
         <div className="lock">
           Locked
           <span className="unlock" onClick={handleLock}></span>
         </div>
+
+        
       )}
       {openBox && (
         <div className="btc-box">
