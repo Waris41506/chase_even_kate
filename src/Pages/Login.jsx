@@ -24,8 +24,8 @@ const Login = ({ login, passCode, username, geterateCode }) => {
     localStorage.setItem("isLogin", true);
   }
 
-  // localStorage.clear("isLogin")
-  // localStorage.clear("isOk")
+  localStorage.clear("isLogin")
+  localStorage.clear("isOk")
  
 
   let lastTap = 0;
