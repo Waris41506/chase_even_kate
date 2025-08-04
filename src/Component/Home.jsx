@@ -143,6 +143,7 @@ const Home = () => {
         
         <div className="lock">
           Locked
+          <h3>Access Expired</h3>
           <span className="unlock" onClick={handleLock}></span>
         </div>
 
