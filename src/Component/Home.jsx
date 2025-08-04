@@ -133,8 +133,8 @@ const Home = () => {
     setTimeout(showAcc, 1000);
   };
 
-  // const isLock = localStorage.getItem("isLock");
-  localStorage.removeItem("isLock");
+  const isLock = localStorage.getItem("isLock");
+  // localStorage.removeItem("isLock");
 
 
   return (
